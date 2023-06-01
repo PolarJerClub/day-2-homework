@@ -23,18 +23,11 @@ for num in sq:
 #Question 4
 names_list = ['   amy', 'Briant', 'Ryan ', ' Alex', 'steve', '  ']
 #expected output = ['Amy', 'Alex']
-names_list2 = names_list.sort()
-sorted = []
-final = []
 
-for i in names_list:
-    sorted += [i.strip('[ ]').title()]
-#     print(sorted)
-for i in sorted:
-    for x in i:
-        if x == "A":
-            final.append(i)
-print(final)
+new_list = [i.strip().title() for i in names_list]
+a_list = [i for i in new_list for x in i if x=='A']
+
+print(a_list)
 
 #Question 5
 for num in range(1, 101):
